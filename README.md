@@ -2,18 +2,18 @@
 
 A simple backend RESTful API application built with Node.js + Express that supports READ operations for products and CRUD operations (Create, Read, Update, Delete) for reviews. It uses a JSON file as a lightweight database, making it ideal for prototyping.
 
-### Features
+## Features
 
-READ operations for Products
-CRUD operations for Reviews associated with products
-Data is stored in a local products.json file
-RESTful API structure
-Built with Express.js
+- READ operations for Products
+- CRUD operations for Reviews associated with products
+- Data is stored in a local products.json file
+- RESTful API structure
+- Built with Express.js
 
-### Requirements
+## Requirements
 
-Node.js v14+
-Express
+- Node.js v14+
+- Express
 
 ## Getting started
 
@@ -33,7 +33,7 @@ start the server
 npm run dev
 ```
 
-### API Endpoints
+## API Endpoints
 
 Products Endpoints: Read
 
