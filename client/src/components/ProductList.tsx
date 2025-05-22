@@ -26,14 +26,7 @@ const ProductList = () => {
                     ))}
 
                     <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    <Product/>
-                    
+
                     {error && <p>{error}</p>}
                 </div>
             </div>
