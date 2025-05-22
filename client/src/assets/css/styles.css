@@ -89,10 +89,7 @@ h4.text-primary {
     width: 100%;
 }
 
-
-
-/* const response = await fetch("../src/assets/storage/products.json"); */
-
+/* CSS FOR REVIEWS */
 
 .review {
     border-bottom: 1px solid #eee;
