@@ -4,6 +4,7 @@ A simple products application consisting of:
 - server: a simple backend RESTful API built with Node.js + Express that supports READ operations for products and CRUD operations (Create, Read, Update, Delete) for reviews. It uses a JSON file as a lightweight database, making it ideal for prototyping.
 - client: a modern frontend application built with React, TypeScript, and Vite, designed to fetch and display products and their associated reviews from the server
 
+
 ## Features
 
 for server:
@@ -20,9 +21,10 @@ for client:
 - Type-safe with TypeScript
 - Fast dev server with Vite
 
+
 ## Requirements
 
-for backend
+for server
 - Node.js v14+
 - Express
 
@@ -33,6 +35,7 @@ for client
 - fetch for API requests
 - Bootstrap for styling
 
+
 ## Getting started
 
 clone the repository
@@ -40,6 +43,21 @@ clone the repository
 git clone https://github.com/kizzanaome/CS472-Final-Project.git
 cd CS472-Final-Project
 ```
+
+#### for server:
+Install the dependencies
+
+```
+cd server
+npm install
+```
+
+start the server
+```
+npm run dev
+```
+
+The app will start at http://localhost:3000 as set in the app.
 
 #### for client:
 Install the dependencies
@@ -56,20 +74,6 @@ npm run dev
 
 The app will start at http://localhost:5173 by default.
 
-#### for server:
-Install the dependencies
-
-```
-cd server
-npm install
-```
-
-start the server
-```
-npm run dev
-```
-
-The app will start at http://localhost:3000 as set in the app.
 
 ## API Endpoints
 
@@ -89,5 +93,3 @@ Reviews CRUD (linked to Products)
 | POST   | `/api/products/:productId/reviews` | Add a review to a product     |
 | PUT    | `/api/reviews/:reviewId`           | Update a review               |
 | DELETE | `/api/reviews/:reviewId`           | Delete a review               |
-
-
