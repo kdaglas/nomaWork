@@ -1,3 +1,47 @@
-.product-img{
-    width: 350px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* .product-img {
+    object-fit: cover;
+    object-position: center;
+} */
+
+body {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
+
+.image-box {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* /CUSTOM CSS FOR THE CARDS */
+
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+}
+
+.product-title {
+    font-weight: 600;
+}
+
+.rating-star {
+    color: #f59e0b;
+    /* star color */
+}
+
+.favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* const response = await fetch("../src/assets/storage/products.json"); */
