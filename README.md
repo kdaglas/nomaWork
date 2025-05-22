@@ -93,3 +93,7 @@ Reviews CRUD (linked to Products)
 | POST   | `/api/products/:productId/reviews` | Add a review to a product     |
 | PUT    | `/api/reviews/:reviewId`           | Update a review               |
 | DELETE | `/api/reviews/:reviewId`           | Delete a review               |
+
+
+by: Naome Kizza
+GitHub: @kizzanaome
