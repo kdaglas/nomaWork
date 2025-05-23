@@ -1,4 +1,5 @@
 import { createContext, useState, type ReactNode, useEffect, useContext } from "react";
+import type { ReviewType } from "../types/ProductInterface";
 
 interface Product {
     id: number,
@@ -7,7 +8,8 @@ interface Product {
     category: string[],
     price: number,
     dateAdded: Date,
-    averageRating: number
+    averageRating: number,
+    reviews: ReviewType[]
 
 }
 
@@ -61,8 +63,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
     const fetchProducts = async (page = 1, category?: string) => {
         try {
             setLoading(true)
-            // let url = `http://localhost:3000/products?page=${page}`;
-            let url = await fetch("../src/assets/storage/products.json");
+            let url = `http://localhost:3000/products?page=${page}`;
             if (category) {
                 url += `&category=${encodeURIComponent(category)}`;
             }
@@ -125,7 +126,8 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
         } else {
             fetchProducts(page);
         }
-    }, [searchQuery, page])
+    }
+        , [searchQuery, page])
 
 
 

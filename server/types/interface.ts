@@ -1,5 +1,5 @@
 
-export  interface ReviewInterface {
+export interface ReviewInterface {
     id: number,
     productId: number,
     author: string,
@@ -10,7 +10,7 @@ export  interface ReviewInterface {
 
 
 
-export  interface ProductInterface {
+export interface ProductInterface {
     id: number,
     name: string,
     description: string,

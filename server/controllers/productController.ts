@@ -1,7 +1,7 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import { Product } from '../models/product.ts';
-import { Review } from '../models/reviews.ts';
+import { Product } from '../models/product';
+import { Review } from '../models/reviews';
 
 
 export const getProducts = async (req: Request, res: Response) => {
@@ -27,7 +27,6 @@ export const getProducts = async (req: Request, res: Response) => {
 
 export const getProductById = async (req: Request, res: Response) => {
     const product = await Product.getProductById(Number(req.params.productId))
-    console.log(req.params.productId)
     res.status(200).json(product);
 }
 
@@ -39,11 +38,24 @@ export const searchProducts = async (req: Request, res: Response) => {
     const product = await Product.searchProductsByName(query);
     res.status(200).json(product);
 }
+
 /** reviews */
 
 export const getProductReviews = async (req: Request, res: Response) => {
     const reviews = await Review.fetchProductReviews(Number(req.params.productId));
     res.status(200).json(reviews);
+}
+
+export const deleteProductReview = async (req: Request, res: Response) => {
+    const { productId, reviewId } = req.params;
+
+    const success = await Review.deleteProductReview(Number(productId), Number(reviewId));
+
+    if (!success) {
+        return res.status(404).json({ message: 'Product or review not found.' });
+    }
+
+    return res.status(200).json({ message: 'Review deleted successfully.' });
 }
 
 // export const save = async (req: Request, res: Response) => {

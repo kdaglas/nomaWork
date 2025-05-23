@@ -1,13 +1,16 @@
 import fs from 'fs/promises';
 import path from "path";
-import { fileURLToPath } from 'url';
+// import { fileURLToPath } from 'url';
 // import  {  ReviewInterface }  from '../types/interface.ts';
 
 // import { ProductInterface } from '../interface.ts';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const filePath = path.resolve(__dirname, '../storage/products.json');
+// const filename = __filename;
+// const __dirname = path.dirname(filename);
+// const filePath = path.resolve(__dirname, '../storage/products.json');
+
+const filePath = path.join(__dirname, '../storage/products.json');
+console.log(filePath)
 
 
 

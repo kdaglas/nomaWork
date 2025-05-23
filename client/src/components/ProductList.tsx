@@ -3,7 +3,7 @@ import { Product } from './Product'
 
 
 
-const ProductList = () => {
+const ProductList = ({ }) => {
     const context = useProductContext();
 
     if (!context) {
@@ -13,24 +13,21 @@ const ProductList = () => {
     const { productList, loading, error } = context;
 
     return (
-        <>
-            <div className="container py-5">
-                <h1 className="display-6 fw-bold mb-4">Products</h1>
-                <div className="row g-4">
-                    {loading && <p>Loading...</p>}
-                    {productList && productList.map((item, key) => (
-                        <Product
-                            key={key}
-                            product={item}
-                        />
-                    ))}
 
-                    <Product/>
 
-                    {error && <p>{error}</p>}
-                </div>
-            </div>
-        </>
+
+        <div className="row g-4">
+            {loading && <p>Loading...</p>}
+            
+            {productList && productList.map((item, key) => (
+                <Product
+                    key={key}
+                    product={item}
+                />
+            ))}
+
+            {error && <p>{error}</p>}
+        </div>
     )
 }
 
