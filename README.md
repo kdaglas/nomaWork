@@ -83,7 +83,7 @@ Products Endpoints: Read
 | ------ | --------------------- | -------------------- |
 | GET    | `/products`           | Get all products     |
 | GET    | `/products/:id`       | Get a single product |
-| GET    | `/products/search?q=` | Get a single product |
+| GET    | `/products/search?q=` | Search for a product |
 
 
 Reviews CRUD (linked to Products)
