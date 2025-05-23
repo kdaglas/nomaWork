@@ -24,7 +24,7 @@ export function SearchInput() {
     return (
         <div className="d-flex align-items-center w-50">
             {/* <label htmlFor="search" className="form-label mr-3">Search:</label> */}
-            <input className="form-control ml-3"
+            <input className="form-control"
                 id="search"
                 name="Search product by name"
                 placeholder="Search product..."

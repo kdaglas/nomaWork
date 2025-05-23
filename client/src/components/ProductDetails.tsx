@@ -76,15 +76,12 @@ function ProductDetails() {
                 </div>
             </div>
 
-
-
             <div className="mt-4">
                 <h4 className='mb-4'>Product Reviews</h4>
                 <Reviews
                     reviews={product.reviews}
                 />
             </div>
-
 
             <div className="mt-5">
                 <h4>Leave a Review</h4>

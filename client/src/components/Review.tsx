@@ -10,6 +10,9 @@ export function Review({ review }: ReviewProp) {
                 <strong>{review.author}</strong>
                 <span>
                     <i className="bi bi-star-fill"></i> {review.rating}
+                    
+                    <i className="bi bi-pencil-fill ms-4"></i>
+                    <i className="bi bi-trash-fill ms-2 text-danger"></i>
                 </span>
             </div>
             <p>{review.comment}</p>
